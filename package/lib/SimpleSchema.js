@@ -7,7 +7,7 @@ import ValidationContext from './ValidationContext';
 import SimpleSchemaGroup from './SimpleSchemaGroup';
 import regExpObj from './regExp';
 import clean from './clean';
-import expandShorthand from './expandShorthand';
+// import expandShorthand from './expandShorthand';
 import { forEachKeyAncestor, isEmptyObject, merge } from './utility';
 import defaultMessages from './defaultMessages';
 
@@ -497,7 +497,8 @@ class SimpleSchema {
       Object.assign(this._cleanOptions, schema._cleanOptions);
       Object.assign(this._constructorOptions, schema._constructorOptions);
     } else {
-      schemaObj = expandShorthand(schema);
+      // schemaObj = expandShorthand(schema);
+      schemaObj = schema;
     }
 
     const schemaKeys = Object.keys(schemaObj);
