@@ -1,5 +1,5 @@
 import { SimpleSchema, ValidationContext } from './SimpleSchema';
-import './clean';
+// import './clean';
 
 SimpleSchema.ValidationContext = ValidationContext;
 

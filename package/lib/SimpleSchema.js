@@ -6,7 +6,7 @@ import humanize from './humanize';
 import ValidationContext from './ValidationContext';
 import SimpleSchemaGroup from './SimpleSchemaGroup';
 import regExpObj from './regExp';
-import clean from './clean';
+// import clean from './clean';
 // import expandShorthand from './expandShorthand';
 import { forEachKeyAncestor, isEmptyObject, merge } from './utility';
 import defaultMessages from './defaultMessages';
@@ -712,7 +712,7 @@ class SimpleSchema {
       if (options.clean === true) {
         // Do this here and pass into both functions for better performance
         optionsClone.mongoObject = new MongoObject(obj, this.blackboxKeys());
-        this.clean(obj, optionsClone);
+        // this.clean(obj, optionsClone);
       }
       if (options.returnErrorsPromise) {
         return this.validateAndReturnErrorsPromise(obj, optionsClone);
@@ -726,7 +726,7 @@ class SimpleSchema {
   }
 
   clean(...args) {
-    return clean(this, ...args);
+    // return clean(this, ...args);
   }
 
   /**
